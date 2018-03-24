@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="mobile-agent" content="format=xhtml; url=http://m.8684.cn/beijing_bus">
+  <title>北京公交查询_北京公交车线路查询_北京公交路线查询_北京公交</title>
+  <meta name="keywords" content="北京公交,北京公交路线,北京公交查询,北京公交网" />
+  <meta name="description" content="北京公交线路查询,北京公交地图,北京公交查询,北京公交路线查询,北京公交网,北京公交车路线查询,北京公交车线路查询,北京坐车网,北京公交查询系统。" />
+  <meta name="applicable-device" content="pc" />
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="http://css.8684.cn/citys/v2/css/style.min.css" />
+  <script type="text/javascript" src="https://js.2011.8684.com/com/sys_ad_for_b.js"></script>
+  <script type="text/javascript" src="http://js.8684.cn/citys/v2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://beijing.8684.cn/6.js"></script>
+  <script type="text/javascript">
+    var timestamp = '1509332645';
+  </script>
+  <script type="text/javascript" src="http://js.8684.cn/citys/v2/base.min.js"></script>
+  <script type="text/javascript">
+    Sys_ad.ldadarr([1134, 1135, 1136, 1231, 1495, 1307, 1495, 1696, 1819, 1573]);
+  </script>
+</head>
+
+<body>
+  <script>
+    Sys_ad.ldad(1495);
+  </script>
+  <div id="auto973adid1134">
+    <script>
+      Sys_ad.ldad(1134);
+    </script>
+  </div>
+  <div id="auto973adid1135">
+    <script>
+      Sys_ad.ldad(1135);
+    </script>
+  </div>
+  <div class="header">
+    <div class="header_layout">
+      <ul class="header_left">
+        <li class="act"><a href="http://www.8684.cn">公交</a></li>
+        <li><a href="http://huoche.8684.cn/" target="_blank">火车</a></li>
+        <li><a href="http://bjmap.8684.cn/" target="_blank">地图</a></li>
+        <li><a href="http://bjdt.8684.cn/" target="_blank">地铁</a></li>
+        <li><a href="http://jipiao.8684.cn/" target="_blank">机票</a></li>
+        <li><a href="http://post.8684.cn/" target="_blank">邮编</a></li>
+        <li><a href="http://hotel.8684.cn/" target="_blank">酒店</a></li>
+        <li><a href="http://tianqi.8684.cn/beijing_beijing" target="_blank">天气</a></li>
+        <li><a href="http://www.gongjiaomi.com/" target="_blank">公交迷</a></li>
+        <li><a href="http://www.8684.cn/tools" target="_blank">实用工具</a></li>
+        <li><a href="http://fun.daiwoqu.com/" target="_blank" class="hotA">发现美好</a></li>
+      </ul>
+      <a href="/" class="see_wx">
+        <div><img src="http://css.8684.cn/www/images/er_wei.png" />
+          <p>关注公众号<span>hi8684</span></p>
+          <p>输入<span>公交</span>查最新公交</p>
+        </div>
+      </a>
+      <div class="header_right"></div>
+    </div>
+  </div>
+  <div class="index_banner">
+    <div class="banner_content style2">
+      <div class="logo_img"><a href="http://www.8684.cn/"><img src="http://css.8684.cn/citys/v2/images/logo.png" /></a></div>
+      <h1 class="banner_txt">北京公交查询</h1><span class="city_show" id="city_show"><span class="city_name">北京</span><span class="city_switch">[切换城市]</span></span>
+      <div
+        class="city_layer" id="city_layer">
+        <div class="hot_city">
+          <div class="hot_city_txt">热门城市<span class="city_close">x</span></div>
+          <div class="hot_city_list"><a id="beijing" href="http://beijing.8684.cn/">北京</a> <a id="guangzhou" href="http://guangzhou.8684.cn/">广州</a>            <a id="shenzhen" href="http://shenzhen.8684.cn/">深圳</a> <a id="chengdu" href="http://chengdu.8684.cn/">成都</a>            <a id="tianjin" href="http://tianjin.8684.cn/">天津</a> <a id="wuhan" href="http://wuhan.8684.cn/">武汉</a> <a id="hangzhou"
+              href="http://hangzhou.8684.cn/">杭州</a> <a id="shanghai" href="http://shanghai.8684.cn/">上海</a> <a id="nanjing"
+              href="http://nanjing.8684.cn/">南京</a> <a id="suzhou" href="http://suzhou.8684.cn/">苏州</a> <a id="fuzhou" href="http://fuzhou.8684.cn/">福州</a>            <a id="xiamen" href="http://xiamen.8684.cn/">厦门</a> <a id="changsha" href="http://changsha.8684.cn/">长沙</a>
+            <a
+              id="chongqing" href="http://chongqing.8684.cn/">重庆</a> <a id="foshan" href="http://foshan.8684.cn/">佛山</a> <a id="dongguan" href="http://dongguan.8684.cn/">东莞</a>              <a id="hefei" href="http://hefei.8684.cn/">合肥</a> <a id="nanning" href="http://nanning.8684.cn/">南宁</a>
+              <a
+                id="zhengzhou" href="http://zhengzhou.8684.cn/">郑州</a> <a id="zhuhai" href="http://zhuhai.8684.cn/">珠海</a></div>
+        </div>
+        <div class="city_tab"><span id="one1" onclick="setTab('one',1,2)" class="act">按省份</span><span id="one2" onclick="setTab('one',2,2)">按拼音</span></div>
+        <div
+          id="con_one_1" class="city_box"></div>
+    <div id="con_one_2" class="city_box hidden"></div>
+  </div>
+  </div>
+  </div>
+  <div class="query_module">
+    <div id="auto973adid1231">
+      <script>
+        Sys_ad.ldad(1231);
+      </script><span class="close_cz" onclick="$(this).parent('div').hide();"></span></div>
+    <!-- 北京、天津城市更换广告 -->
+    <div id="auto973adid1696">
+      <script>
+        Sys_ad.ldad(1696);
+      </script><span class="close_cz" onclick="$(this).parent('div').hide();"></span></div>
+    <div class="query_module_left"><span class="act" id="two1" onclick="setTab('two',1,3)">换乘查询</span><span id="two2" onclick="setTab('two',2,3)">线路查询</span>
+      <span
+        id="two3" onclick="setTab('two',3,3)">站点查询</span>
+    </div>
+    <div class="query_module_right">
+      <form action="/so.php" onsubmit="return check_bus_p2p()"><input type="hidden" name="k" value="p2p" />
+        <div class="query_results" id="con_two_1">
+          <div class="query_text_l">
+            <div class="query_hr"><span class="query_txt_1">出发地</span><input type="text" id="origin" class="query_input" autocomplete="off" placeholder="请输入起点名称"
+                value="" name="q" /></div>
+            <div class="query_hr"><span class="query_txt_1">目的地</span><input type="text" id="destination" class="query_input" autocomplete="off"
+                placeholder="请输入终点名称" value="" name="q1" /></div>
+          </div>
+          <div class="query_text_c"><span class="switch" id="switch" onclick="query_tab()"></span></div>
+          <div class="query_text_r"><input type="submit" value="查询" class="query_button" /></div>
+          <div class="query_text_bottom">
+            <div class="left"><span class="query_txt_1">出发地</span>
+              <dl class="select interval">
+                <dt id="zdfl_1">站点分类</dt>
+              </dl>
+              <dl class="select">
+                <dt id="zdmc_1">站点名称</dt>
+              </dl>
+            </div>
+            <div class="right"><span class="query_txt_1">目的地</span>
+              <dl class="select interval">
+                <dt id="zdfl_2">站点分类</dt>
+              </dl>
+              <dl class="select">
+                <dt id="zdmc_2">站点名称</dt>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form action="/so.php" onsubmit="return check_bus_pp()"><input type="hidden" name="k" value="pp" />
+        <div class="query_results hidden" id="con_two_2">
+          <div class="route_query">
+            <div class="left"><input type="text" id="origin_1" class="route_query_input" autocomplete="off" placeholder="线路名称，如“B25”" value=""
+                name="q" />
+              <dl class="select interval">
+                <dt id="xlfl">线路分类</dt>
+              </dl>
+              <dl class="select">
+                <dt id="xlmc">线路名称</dt>
+              </dl>
+            </div>
+            <div class="query_text_r"><input type="submit" value="查询" class="query_button" /></div>
+          </div>
+        </div>
+      </form>
+      <form action="/so.php" onsubmit="return check_bus_p()"><input type="hidden" name="k" value="p" />
+        <div class="query_results hidden" id="con_two_3">
+          <div class="route_query">
+            <div class="left"><input type="text" id="origin_2" class="route_query_input" autocomplete="off" placeholder="站点名称，如“岗顶”" value=""
+                name="q" />
+              <dl class="select interval">
+                <dt id="zdfl_3">站点分类</dt>
+              </dl>
+              <dl class="select">
+                <dt id="zdmc_3">站点名称</dt>
+              </dl>
+            </div>
+            <div class="query_text_r"><input type="submit" value="查询" class="query_button" /></div>
+          </div>
+        </div>
+      </form>
+      <ul class="citybusTipul"></ul>
+    </div>
+  </div>
+  <div id="auto973adid1136">
+    <script>
+        Sys_ad.ldad(1136);
+    </script>
+  </div>
+  <div class="bus_classification">
+    <div class="bus_layer">
+      <div class="bus_layer_top">
+        <div class="bus_layer_hr"></div><span class="bus_layer_title">北京公交路线</span></div>
+      <div class="bus_layer_content"><span class="bus_kt1">以数字开头：</span>
+        <div class="bus_kt_r1"><a href="/list1">1</a><a href="/list2">2</a><a href="/list3">3</a><a href="/list4">4</a><a href="/list5">5</a>
+          <a
+            href="/list6">6</a><a href="/list7">7</a><a href="/list8">8</a><a href="/list9">9</a></div>
+      </div>
+      <div class="bus_layer_content"><span class="bus_kt2">以汉字/字母开头：</span>
+        <div class="bus_kt_r2"><a href="/listB">B</a><a href="/listC">C</a><a href="/listD">D</a><a href="/listE">E</a><a href="/listF">F</a>
+          <a
+            href="/listG">G</a><a href="/listH">H</a><a href="/listK">K</a><a href="/listL">L</a><a href="/listM">M</a><a href="/listN">N</a>
+            <a
+              href="/listP">P</a><a href="/listQ">Q</a><a href="/listS">S</a><a href="/listT">T</a><a href="/listX">X</a><a href="/listY">Y</a>
+              <a
+                href="/listZ">Z</a>
+        </div>
+      </div>
+      <div class="bus_layer_content"><span class="bus_layer_l">线路分类：</span>
+        <div class="bus_layer_r"><a href="/line1">市区普线</a><a href="/line2">郊区普线</a><a href="/line3">快速公交</a><a href="/line4">微循环线</a><a href="/line5">通勤线路</a>
+          <a
+            href="/line6">快速直达</a><a href="/line7">城际班线</a><a href="/line8">夜班线路</a><a href="/line9">商务班车</a><a href="/line10">远郊区线</a>
+            <a
+              href="/line11">机场大巴</a><a href="/line12">轨道交通</a><a href="/line13">水上航线</a><a href="/line14">旅游集散</a><a href="/line15">祥龙运通</a></div>
+      </div>
+      <div class="bus_layer_content"><span class="bus_layer_l">热门线路：</span>
+        <div class="bus_layer_r"><a href="/x_81280ef0">850</a><a href="/x_35b1e697">328</a><a href="/x_c40acec0">919</a><a href="/x_875510ab">930</a>
+          <a
+            href="/x_7b96b565">31路公交车路线</a><a href="/x_05db550f">312</a><a href="/x_bf864a1a">124</a><a href="/x_968a4331">16路公交车路线</a><a href="/x_b1e20d0f">106</a>
+            <a
+              href="/x_0c88d7d1">810</a><a href="/x_94d65922">11路公交车路线</a><a href="/x_1758ec7d">132</a></div>
+      </div>
+    </div>
+    <div class="bus_layer">
+      <div class="bus_layer_top">
+        <div class="bus_layer_hr"></div><span class="bus_layer_title">北京公交站点</span></div>
+      <div class="bus_layer_content"><span class="bus_layer_l">站点分类：</span>
+        <div class="bus_layer_r"><a href="/sitemap1">数字</a><a href="/sitemap2">A</a><a href="/sitemap3">B</a><a href="/sitemap4">C</a><a href="/sitemap5">D</a>
+          <a
+            href="/sitemap6">E</a><a href="/sitemap7">F</a><a href="/sitemap8">G</a><a href="/sitemap9">H</a><a href="/sitemap10">I</a><a href="/sitemap11">J</a>
+            <a
+              href="/sitemap12">K</a><a href="/sitemap13">L</a><a href="/sitemap14">M</a><a href="/sitemap15">N</a><a href="/sitemap16">O</a>
+              <a
+                href="/sitemap17">P</a><a href="/sitemap18">Q</a><a href="/sitemap19">R</a><a href="/sitemap20">S</a><a href="/sitemap21">T</a>
+                <a
+                  href="/sitemap22">W</a><a href="/sitemap23">X</a><a href="/sitemap24">Y</a><a href="/sitemap25">Z</a></div>
+      </div>
+      <div class="bus_layer_content"><span class="bus_layer_l">热门站点：</span>
+        <div class="bus_layer_r"><a href="/z_59781263">武圣路</a><a href="/z_cbb56209">马尾沟</a><a href="/z_b2402e9b">翠微路口</a><a href="/z_0b46af42">和平西桥北</a>
+          <a
+            href="/z_24f1be5b">护国寺</a><a href="/z_60869f3c">刘家窑桥西</a><a href="/z_287b82fa">地坛东门</a><a href="/z_7c09249e">和平里北街西口</a><a href="/z_3ee5ae42">北下关</a>
+            <a
+              href="/z_cac81bdb">牡丹园</a><a href="/z_35a30042">米市大街</a><a href="/z_5388fa7a">祁家豁子</a><a href="/z_2b3096d8">钓鱼台</a><a href="/z_846d761a">公安大学</a>
+              <a
+                href="/z_86c78837">洋桥西</a><a href="/z_23b672bd">石佛营西里</a><a href="/z_ec575ad0">民族文化宫</a><a href="/z_c5d6d6c8">灯市西口</a><a href="/z_80a01136">桥湾</a>
+                <a
+                  href="/z_d3f3fe2d">石佛营西里东站</a>
+        </div>
+      </div>
+    </div>
+    <div class="bus_layer">
+      <div class="bus_layer_top">
+        <div class="bus_layer_hr"></div> <span class="bus_layer_title">演出推荐</span> </div>
+      <div class="bus_layer_content"><a target="_blank" href="http://show.daiwoqu.com/zt_946">迷笛音乐节2017</a><a target="_blank" href="http://show.daiwoqu.com/zt_532">张学友2017演唱会安排</a>
+        <a
+          target="_blank" href="http://show.daiwoqu.com/zt_22">华晨宇演唱会</a><a target="_blank" href="http://show.daiwoqu.com/zt_4">陈奕迅演唱会2017</a></div>
+    </div>
+    <div class="bus_layer">
+      <div class="bus_layer_top">
+        <div class="bus_layer_hr"></div> <span class="bus_layer_title">周边城市公交</span> </div>
+      <div class="bus_layer_content"><a href="http://shanghai.8684.cn/">上海公交</a><a href="http://tianjin.8684.cn/">天津公交</a><a href="http://beijing.8684.cn/">北京公交</a>
+        <a
+          href="http://chongqing.8684.cn/">重庆公交</a><a href="http://aomen.8684.cn/">澳门公交</a><a href="http://hongkong.8684.cn/">香港公交</a></div>
+    </div>
+    <div class="bus_layer">
+      <div class="bus_layer_top">
+        <div class="bus_layer_hr"></div><span class="bus_layer_title">热门城市公交</span></div>
+      <div class="bus_layer_content"><a href="http://beijing.8684.cn/">北京公交</a><a href="http://guangzhou.8684.cn/">广州公交</a><a href="http://shenzhen.8684.cn/">深圳公交</a>
+        <a
+          href="http://chengdu.8684.cn/">成都公交</a><a href="http://tianjin.8684.cn/">天津公交</a><a href="http://hangzhou.8684.cn/">杭州公交</a><a href="http://shanghai.8684.cn/">上海公交</a>
+          <a
+            href="http://wuhan.8684.cn/">武汉公交</a><a href="http://nanjing.8684.cn/">南京公交</a><a href="http://suzhou.8684.cn/">苏州公交</a><a href="http://changsha.8684.cn/">长沙公交</a>
+            <a
+              href="http://fuzhou.8684.cn/">福州公交</a><a href="http://xiamen.8684.cn/">厦门公交</a><a href="http://hefei.8684.cn/">合肥公交</a><a href="http://chongqing.8684.cn/">重庆公交</a>
+              <a
+                href="http://zhengzhou.8684.cn/">郑州公交</a><a href="http://dongguan.8684.cn/">东莞公交</a><a href="http://foshan.8684.cn/">佛山公交</a><a href="http://wuxi.8684.cn/">无锡公交</a>
+                <a
+                  href="http://nanning.8684.cn/">南宁公交</a><a href="http://xian.8684.cn/">西安公交</a><a href="http://qingdao.8684.cn/">青岛公交</a><a href="http://shenyang.8684.cn/">沈阳公交</a>
+                  <a
+                    href="http://zhuhai.8684.cn/">珠海公交</a><a href="http://jinan.8684.cn/">济南公交</a><a href="http://ningbo.8684.cn/">宁波公交</a><a href="http://haerbin.8684.cn/">哈尔滨公交</a>
+                    <a
+                      href="http://dalian.8684.cn/">大连公交</a><a href="http://nanchang.8684.cn/">南昌公交</a><a href="http://kunshan.8684.cn/">昆山公交</a><a href="http://taiyuan.8684.cn/">太原公交</a>
+                      <a
+                        href="http://changzhou.8684.cn/">常州公交</a><a href="http://guiyang.8684.cn/">贵阳公交</a></div>
+    </div>
+  </div>
+  <div class="query_module_bottom"></div>
+  <div class="friendship_link">
+    <div class="fl_left">友情链接：</div>
+    <div class="fl_right"><a target="_blank" href="http://xiaorizi.me/beijing/">北京特色小店</a><a target="_blank" href="http://show.daiwoqu.com/zt_835">开心麻花话剧</a>
+      <a
+        target="_blank" href="http://beijing.8684.com/b_219">北京钱柜ktv</a><a target="_blank" href="http://bjdt.8684.cn/list_time">北京地铁运营时间</a><a target="_blank" href="http://bj.city8.com/">北京地图</a>
+        <a
+          target="_blank" href="http://china.npicp.com/">新品快播网</a><a target="_blank" href="http://huoche.8684.cn/">列车时刻表及票价查询2017</a><a target="_blank" href="http://bj.tuniu.com">北京旅游网</a>
+          <a
+            target="_blank" href="http://bjmap.8684.cn/">北京市地图高清版</a><a target="_blank" href="http://beijing.anjuke.com/">北京房产网</a><a target="_blank" href="http://beijing.jinti.com/">北京分类信息</a>
+            <a
+              target="_blank" href="http://www.kuyiso.com/">分类信息</a><a target="_blank" href="http://newcar.xcar.com.cn/">选车工具</a><a target="_blank" href="http://www.chexun.com/">车讯网</a>
+              <a
+                target="_blank" href="http://www.weixinyidu.com/">微信头条</a><a target="_blank" href="http://tianqi.8684.cn/beijing_beijing">北京天气预报一周</a><a target="_blank" href="http://show.daiwoqu.com/show_beijing">北京演唱会</a>
+                <a
+                  target="_blank" href="http://show.daiwoqu.com/zt_1177">刘德华演唱会</a><a target="_blank" href="http://m.8684.cn/beijing_bus">北京公交查询</a></div>
+  </div>
+  <div class="bus_foot">
+    <div class="bus_foot_p"><span>手机客户端：<a href="http://mobile.8684.cn/feedback.php">意见反馈</a></span><span class="interval">商务合作(其他勿扰)：QQ1653544896</span></div>
+    <div
+      class="bus_foot_p bus_foot_interval"><a href="http://www.8684.cn">公交查询</a><a href="http://www.8684.cn/about">关于8684</a><a href="http://www.8684.cn/privacy">免责声明</a>
+      <a
+        href="http://www.tianqu.com.cn/zhaopin">招聘信息</a>
+  </div>
+  <div class="bus_foot_p"><a href="http://www.tianqu.com.cn/">广州天趣网络科技有限公司</a><span class="interval">版权所有</span><a class="interval" href="http://www.miibeian.gov.cn/">粤ICP备11063314号</a></div>
+  </div>
+  <script type="text/javascript" src="/header_js.php?charset=utf-8&isindex=0"></script>
+  <script type="text/javascript" src="http://js.8684.cn/tj/citytj.js"></script>
+  <script src="http://2012.8684.com/tj.js"></script>
+</body>
+
+</html>
+<!-- 2017-10-30 11:04:05 -->

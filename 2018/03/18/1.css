@@ -1,0 +1,28 @@
+/*
+ * @Author: chen zhen 
+ * @Date: 2018-03-18 09:54:18 
+ * @Last Modified by: chen zhen
+ * @Last Modified time: 2018-03-18 10:40:00
+ * @Description 主样式文件
+ */
+
+ * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+ 
+ body {
+   position: absolute;
+   top: 0;
+   left: 0;
+   min-height: 100%;
+   margin: 0;
+   font-size: 14px;
+   font-family: "Microsoft YaHei";
+ }
+
+.box{
+  height: 300px;
+  width: 300px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    webSocket = new WebSocket('ws://ioc.bonc.com.cn:8081/bonc_kmioc_em/videoWebsocket');
+    // 收到服务端消息
+    webSocket.onmessage = function (msg) {
+
+    }
+    // 异常
+    webSocket.onerror = function (event) {
+      if (window.console) {
+        console.log('异常time:' + Date() + 'message:' + event);
+      };
+    };
+    // 建立连接
+    webSocket.onopen = function (event) {
+      if (window.console) {
+        console.log('建立连接time:' + Date() + 'message:' + event);
+      };
+    };
+		    // 关闭连接
+    webSocket.onclose = function () {
+		    webSocket.close();
+      if (window.console) {
+        console.log('断开连接time:' + Date());
+      };
+    };
+  </script>
+</body>
+
+</html>

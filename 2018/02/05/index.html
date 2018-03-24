@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var worker = new Worker('./worker.js')
+    // worker.addEventListener('message', (message) => {
+    //   console.log(message)
+    // })
+    worker.onmessage = (message) => {
+      console.log(message)
+    }
+    worker.postMessage(1)
+    worker.postMessage(2)
+    worker.postMessage(3)
+    worker.postMessage(4)
+    worker.postMessage(5)
+  </script>
+</body>
+</html>

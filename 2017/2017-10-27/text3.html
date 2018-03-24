@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style lang="">
+    ul,
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      text-align: center;
+      height: 300px;
+    }
+
+    li img {
+      padding: 2.6rem 0;
+      width: 90%
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>
+      <img src="" alt="" data-src="./flex.png">
+    </li>
+    <li>
+      <img src="" alt="" data-src="./flex.png">
+    </li>
+    <li>
+      <img src="" alt="" data-src="./flex.png">
+    </li>
+    <li>
+      <img src="" alt="" data-src="./flex.png">
+    </li>
+    <li>
+      <img src="" alt="" data-src="./flex.png">
+    </li>
+    <li>
+      <img src="" alt="" data-src="./flex.png">
+    </li>
+    <li>
+      <img src="" alt="" data-src="./flex.png">
+    </li>
+    <li>
+      <img src="" alt="" data-src="./flex.png">
+    </li>
+    <li>
+      <img src="" alt="" data-src="./flex.png">
+    </li>
+    <li>
+      <img src="" alt="" data-src="./flex.png">
+    </li>
+  </ul>
+  <script>
+    var wh = window.innerHeight;  // 获取屏幕高度
+    var imgs = document.getElementsByTagName("img"); // 获取所有图片
+
+    // 滑动屏幕时，执行加载图片的操作
+    window.onscroll = function () {
+      for (var i = 0; i < imgs.length; i++) {
+        var imgTop = imgs[i].getBoundingClientRect().top;// 获得图片相对于屏幕视窗顶部的距离
+        if (wh >= imgTop) {
+          // 如果距离小于等于屏幕的高度，也就是图片已经可见，那就替换对应的实际图片地址
+          imgs[i].setAttribute("src", imgs[i].getAttribute("data-src"))
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

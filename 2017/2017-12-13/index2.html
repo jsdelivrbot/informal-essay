@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <input name="file1" type="file">
+  <button click="click">上传</button>
+  <script>
+    var click = function() {
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET", "../201407/mytest.svg", true);
+      ajax.onload = function (e) {
+        document.body.insertAdjacentHTML("afterBegin", '<div style="display:none;">' + ajax.responseText + '</div>')
+      }
+      ajax.send();
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style lang="css">
+    body{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 1000px;
+      width: 1000px;
+    }
+    .list li {
+      float: left;
+      width: 50%;
+      
+    }
+    .list li .imgbox {
+      position: relative;
+      display: block;
+      padding: 133.33% 0 0;
+      background: red;
+    }
+    .imgbox img {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+  </style>
+</head>
+
+<body>
+  <ul class="list">
+    <li>
+      <span class="imgbox">
+        <img src="">
+      </span>
+    </li>
+  </ul>
+</body>
+
+</html>

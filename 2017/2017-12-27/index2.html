@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文件拖拽</title>
+<style>
+.box{ width:200px; height:200px; background:red; position:absolute; left:50%; top:50%; margin:-100px 0 0 -100px; display:none; text-align:center; line-height:200px; color:#fff; }
+</style>
+<script>
+window.onload=function (){
+    var oDiv=document.querySelector('.box');
+    var oPic=document.getElementById('pic');
+    var oM=document.getElementById('m');
+
+    //进入页面
+    var timer=null;
+    document.ondragover=function (){
+        oDiv.style.display='block'; 
+        clearTimeout(timer);
+        timer=setTimeout(function (){
+            oDiv.style.display='none';
+        },300); 
+    };
+    //文件进入元素
+    oDiv.ondragenter=function (){
+        oDiv.innerHTML='释放鼠标';
+    };
+    //文件离开元素
+    oDiv.ondragleave=function (){
+        oDiv.innerHTML='将文件拖到此区域';
+    };
+    //文件丢到div上
+    oDiv.ondrop=function (ev){
+        //获取文件信息
+        var oF=ev.dataTransfer.files[0];
+        //读取方式
+        var reader=new FileReader(); 
+        reader.onload=function (){
+            //alert('读取成功'); 
+            oPic.src=reader.result;
+        }; 
+        reader.error=function (){
+            alert('读取失败');
+        }; 
+        reader.onloadend=function (){
+            alert('读取完成');
+        }; 
+        reader.onloadstart=function (){
+            alert('开始读取');
+        }; 
+        //正在读取
+        reader.onprogress=function (ev){
+            //当前读取多少        ev.loaded
+            //总大小           ev.total
+            var scale=ev.loaded/ev.total; 
+            if(scale>0.5){
+                reader.abort();     //强制中断
+            } 
+            oM.value=scale*100;
+        }; 
+        //读取中断
+        reader.onabort=function (){
+            alert('读取中断');
+        };
+        reader.readAsDataURL(oF);
+        return false;
+    };
+
+    //阻止浏览器默认事件
+    oDiv.ondragover=function (){
+        return false;
+    };
+};
+</script>
+</head>
+<body>
+    <img src="" id="pic" width="100" height="100" alt="" />
+    <div class="box">将文件拖到此区域</div>
+    <meter id="m" max="100" value="0"></meter>
+</body>
+</html>

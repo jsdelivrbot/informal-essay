@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="id_div">文本内容</div><br><a href='#' id="copy_text" title="以纯文本形式复制">复制文章纯文本内容</a><br>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="./js2/ZeroClipboard.js"></script>
+  <script type="text/javascript">
+  var clip = null;
+ // ZeroClipboard.setMoviePath("./js2/ZeroClipboard.swf");
+  $(document).ready(function(){
+    new ZeroClipboard( document.getElementById("copy_text") );
+  });
+  </script>
+</body>
+</html>

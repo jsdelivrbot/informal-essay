@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Polygons!</title>
+    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/2.1/js/dojo/dijit/themes/claro/claro.css">
+    <style>
+      html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+      #map{
+        padding:0;
+      }
+    </style>
+    <script type="text/javascript">var djConfig = {parseOnLoad: true};</script>
+    <script type="text/javascript" src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=2.1"></script>
+    <script type="text/javascript">
+      dojo.require("dijit.layout.BorderContainer");
+      dojo.require("dijit.layout.ContentPane");
+      dojo.require("esri.map");
+      var map;
+      function init() {
+        var initExtent = new esri.geometry.Extent({"xmin":-12959519,"ymin":3696971,"xmax":-9444639,"ymax":5453188,"spatialReference":{"wkid":102100}});
+        map = new esri.Map("map",{extent:initExtent});
+        var basemap = new esri.layers.ArcGISTiledMapServiceLayer("http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer");
+        map.addLayer(basemap);
+        var resizeTimer;
+        dojo.connect(map, 'onLoad', function(theMap) {
+          dojo.connect(dijit.byId('map'), 'resize', function() {  //resize the map if the div is resized
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout( function() {
+              map.resize();
+              map.reposition();
+            }, 500);
+          });
+          var poly = new esri.geometry.Polygon({"rings":
+            [
+              [[-11214840,4858704],[-10520181,4853812],[-10510397,4149368],[-11219732,4144476],[-11214840,4858704]], // ring #1, poly with two holes
+              [[-11097433,4770648],[-10916430,4770648],[-10916430,4609213],[-10984918,4560294],[-11097433,4614105],[-11097433,4770648]], // ring #2, a hole
+              [[-10779455,4472238],[-10622912,4349939],[-10750103,4242315],[-10833267,4296127],[-10779455,4472238]],  // ring #3, another hole
+              [[-11298004,4614105],[-11293112,4310803],[-11571954,4305911],[-11542602,4584753],[-11298004,4614105]] // ring #4, western polygon
+            ],
+            "spatialReference":{"wkid":102100}
+          });
+          var sym = new esri.symbol.SimpleFillSymbol({"color":[255,255,0,64],"outline":{"color":[255,0,0,255],"width":1.5,"type":"esriSLS","style":"esriSLSDashDot"},"type":"esriSFS","style":"esriSFSSolid"});
+          var graphic = new esri.Graphic(poly, sym);
+          map.graphics.add(graphic);
+        });
+      }
+      dojo.addOnLoad(init);
+    </script>
+  </head>
+  <body class="claro">
+    <div dojotype="dijit.layout.BorderContainer" design="headline" gutters="false"
+    style="width: 100%; height: 100%; margin: 0;">
+      <div id="map" dojotype="dijit.layout.ContentPane" region="center" style="overflow:hidden;">
+      </div>
+    </div>
+  </body>
+</html>

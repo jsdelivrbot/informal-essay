@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <textarea name="" id="copy_msg_one" readonly>一键复制至剪切版</textarea>
+    <input type="button" id="copy_url_one" value="复制">
+   <script>
+    copyUrl ( $("#copy_msg_one") );
+     function copyUrl(dom) {
+           dom.click(function () {
+               var url = $(this).prev(); //根据实际情况更改,需要复制内容的载体
+               url.select();
+               document.execCommand("Copy");
+               alert("已复制至剪切板");
+           })
+       }
+   </script>
+</body>
+</html>

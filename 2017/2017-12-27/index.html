@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>css3伪类</title>
+
+<style type="text/css">
+    .ui-box {
+        display: -webkit-box;
+        display: box;
+        margin-top: 10px;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 10px;
+    }
+    .input {
+        height: 100%;
+        border:none;
+        border-bottom: 1px solid #ccc;
+        margin: 0 20px;
+        
+        background: #fff;
+        width: 200px;
+    }
+    /*
+        如果使用div 替代input ，使用:empty伪元素
+    
+    .input:empty::before {
+      content: attr(placeholder);
+    }
+    */
+
+    /*
+        默认不显示发送
+    */
+    .send {
+        display: none;
+    }
+    /*
+        输入框获得焦点后相邻发送按钮显示
+    */
+    .input:focus ~ .send {
+        display: block;
+    }
+    /*
+        输入框校验合法 发送按钮显示红色
+    */
+    .input:valid ~ .send {
+      display: block;
+      color: red;
+    }
+    /*
+        输入框获得焦点或者输入框输入合法，不显示点赞
+    */
+    .input:focus ~ .like, 
+    .input:valid ~ .like {
+      display: none;
+    }
+</style>
+</head>
+
+<body>
+    <div class="ui-box">
+        <input type="text" class="input" required="required" placeholder="请输入"/>
+        <!-- <div class="input" contenteditable="true" placeholder="请输入"></div> -->
+        <div class="like">点赞</div>
+        <div class="send">发送</div>
+    </div>
+</body>
+</html>
