@@ -1,0 +1,1 @@
+db.PositionEx.aggregate([{$project: {timeFormat: { $dateToString: { format: "%Y-%m-%d", date: "$systemtime" } }}, $group : {_id : "$timeFormat", num_tutorial : {$sum : 1}}}])
